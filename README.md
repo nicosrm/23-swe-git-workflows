@@ -1,5 +1,7 @@
 # Best Practises für Git-Vorgehensmodell in größeren Teams
 
+[Download](https://gitlab.dit.htwk-leipzig.de/23-swe-thema-1/abgabe/-/jobs/artifacts/main/raw/Beleg.pdf?job=build) der aktuellen Version des Belegs
+
 ## Kontext
 
 Eigenschaft | Wert
