@@ -1,8 +1,8 @@
 image: registry.gitlab.com/islandoftex/images/texlive:latest
 
 variables:
-  # tex file with file extension (.tex)
-  MAIN_TEX_FILE: beleg.tex
+  # tex file without .tex extensions
+  MAIN_TEX_FILE: beleg
 
   # output file name without extension (.pdf)
   # e.g. "file" will result in "file.pdf"
@@ -15,7 +15,8 @@ build:
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE
   
   after_script:
-    - cat essay.log
+    - cat $MAIN_TEX_FILE.log
+    - mv $MAIN_TEX_FILE.pdf $OUTPUT_FILE_NAME.pdf
   
   artifacts:
     paths:
