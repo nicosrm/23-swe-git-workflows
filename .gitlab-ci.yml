@@ -1,0 +1,24 @@
+image: registry.gitlab.com/islandoftex/images/texlive:latest
+
+variables:
+  # tex file with file extension (.tex)
+  MAIN_TEX_FILE: beleg.tex
+
+  # output file name without extension (.pdf)
+  # e.g. "file" will result in "file.pdf"
+  OUTPUT_FILE_NAME: Beleg
+
+build:
+  script:
+    - pdflatex $MAIN_TEX_FILE --shell-escape
+    - biber beleg
+    - pdflatex $MAIN_TEX_FILE --shell-escape
+  
+  after_script:
+    - cat essay.log
+  
+  artifacts:
+    paths:
+      - $OUTPUT_FILE_NAME.pdf
+
+# https://gitlab.com/islandoftex/images/texlive/-/wikis/Compiling-LaTeX-documents-with-GitLab-CI

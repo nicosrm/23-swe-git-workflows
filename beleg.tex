@@ -1,0 +1,30 @@
+% !TeX root = beleg.tex
+
+\input{src/header/header}
+
+\begin{document}
+
+% title page
+\input{src/title_page/title_page}
+
+
+% table of contents
+\tableofcontents
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% main content
+\input{src/content/main_content}
+
+
+% appendix
+\appendix
+\newpage
+\pagenumbering{Roman}
+\input{src/content/appendix.tex}
+
+
+% references
+\newpage
+\printbibliography[heading=bibintoc]
+
+\end{document}
