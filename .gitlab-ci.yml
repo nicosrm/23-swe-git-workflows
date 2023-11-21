@@ -10,9 +10,9 @@ variables:
 
 build:
   script:
-    - pdflatex $MAIN_TEX_FILE --shell-escape
+    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE
     - biber beleg
-    - pdflatex $MAIN_TEX_FILE --shell-escape
+    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE
   
   after_script:
     - cat essay.log
