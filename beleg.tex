@@ -8,11 +8,19 @@
 \input{src/title_page/title_page}
 
 
+% abstract
+\pagenumbering{gobble}
+\input{src/content/abstract.tex}
+
+
 % table of contents
+\newpage
 \tableofcontents
-\par\noindent\rule{\textwidth}{0.4pt}
+
 
 % main content
+\newpage
+\pagenumbering{arabic}
 \input{src/content/main_content}
 
 
