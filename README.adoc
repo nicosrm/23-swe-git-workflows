@@ -15,7 +15,7 @@ TBD
 | Nico Schramm, Johann Straube, Mirella Willems
 
 | Beleg
-| https://gitlab.dit.htwk-leipzig.de/23-swe-thema-1/abgabe/-/jobs/artifacts/main/raw/Beleg.pdf?job=build[aktuelle Version des Belegs]
+| https://gitlab.dit.htwk-leipzig.de/23-swe-thema-1/abgabe/-/jobs/artifacts/main/raw/Beleg.pdf?job=build[PDF-Version], link:beleg.tex[LaTeX-Datei]
 
 | Präsentation
 | TBA
