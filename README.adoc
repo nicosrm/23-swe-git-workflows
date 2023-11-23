@@ -1,11 +1,15 @@
 = Best Practises für Git-Vorgehensmodell in größeren Teams
 
+== Abstrakt
+
+TBD
+
 == Kontext
 
 [cols=2,1]
 |===
 | Titel
-| Best Practises für Git-Vorgehensmodell in größeren Teams
+| Best Practices für Git-Vorgehensmodell in größeren Teams
 
 | Autor:innen (alphabetisch)
 | Nico Schramm, Johann Straube, Mirella Willems
