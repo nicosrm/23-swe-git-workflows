@@ -1,0 +1,27 @@
+= Best Practises für Git-Vorgehensmodell in größeren Teams
+
+== Kontext
+
+[cols=2,1]
+|===
+| Titel
+| Best Practises für Git-Vorgehensmodell in größeren Teams
+
+| Autor:innen (alphabetisch)
+| Nico Schramm, Johann Straube, Mirella Willems
+
+| Beleg
+| https://gitlab.dit.htwk-leipzig.de/23-swe-thema-1/abgabe/-/jobs/artifacts/main/raw/Beleg.pdf?job=build[aktuelle Version des Belegs]
+
+| Präsentation
+| TBA
+
+| Kontext
+| Modul “Software Engineering” (Prof. Dr. Andreas Both, Wintersemester 2023/2024) an der HTWK Leipzig
+
+| Lizenz
+| link:LICENSE[CC BY 4.0]
+
+| Präsentationstermin
+| 12. Dezember 2023
+|===
