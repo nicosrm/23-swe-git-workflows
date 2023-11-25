@@ -11,7 +11,7 @@ variables:
 build:
   script:
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
-    - biber beleg
+    - biber MAIN_TEX_FILE
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
   
   after_script:
