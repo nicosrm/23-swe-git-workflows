@@ -2,11 +2,11 @@ image: registry.gitlab.com/islandoftex/images/texlive:latest
 
 variables:
   # tex file without .tex extensions
-  MAIN_TEX_FILE: beleg
+  MAIN_TEX_FILE: 01_git-vorgehensmodelle
 
   # output file name without extension (.pdf)
   # e.g. "file" will result in "file.pdf"
-  OUTPUT_FILE_NAME: Beleg
+  OUTPUT_FILE_NAME: 01-Git_Vorgehensmodelle
 
 build:
   script:
