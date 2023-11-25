@@ -10,12 +10,13 @@ variables:
 
 build:
   script:
-    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE
+    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
     - biber beleg
-    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE
+    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
   
   after_script:
     - cat $MAIN_TEX_FILE.log
+    - ls -lah
     - mv $MAIN_TEX_FILE.pdf $OUTPUT_FILE_NAME.pdf
   
   artifacts:
