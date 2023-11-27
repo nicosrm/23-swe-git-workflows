@@ -11,6 +11,7 @@ variables:
 build:
   script:
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
+    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
   
   after_script:
     - cat $MAIN_TEX_FILE.log
