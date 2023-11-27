@@ -4,35 +4,27 @@
 
 \begin{document}
 
-% title page
-\input{src/title_page/title_page}
-
+\input{src/document_setup.tex}
 
 % abstract
-\pagenumbering{gobble}
-\input{src/content/abstract.tex}
+\begin{abstract}
+    \input{src/content/abstract}
+\end{abstract}
 
-
-% table of contents
-\newpage
-\tableofcontents
-
+\maketitle
 
 % main content
-\newpage
-\pagenumbering{arabic}
 \input{src/content/main_content}
+
+
+% references
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{src/references/references}
 
 
 % appendix
 \appendix
-\newpage
-\pagenumbering{Roman}
 \input{src/content/appendix}
 
-
-% references
-\newpage
-\printbibliography[heading=bibintoc]
-
 \end{document}
+\endinput

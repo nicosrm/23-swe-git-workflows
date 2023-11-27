@@ -1,62 +1,39 @@
 % !TeX root = ../../01_git-vorgehensmodelle.tex
 
-\usepackage[
-    top=3cm, 
-    bottom=3cm,
-    left=3cm, 
-    right=3cm
-]{geometry}
-
-\usepackage{parskip}
-\usepackage{setspace}
-\setstretch{1.1}
-
-\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 
-\usepackage[ngerman]{babel}
-\usepackage[htt]{hyphenat}
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
 
-\usepackage[style=numeric-comp]{biblatex}
-\addbibresource{src/references/references.bib}
-\DefineBibliographyStrings{ngerman}{
-    andothers = {et\addabbrvspace al\adddot}
-}
-
-\usepackage{ccicons}
-
-% Fix overfull hbox
-% https://tex.stackexchange.com/questions/171999/overfull-hbox-in-biblatex#comment397014_171999
-\usepackage[final]{microtype}
+\usepackage[figurename=Fig.]{caption}
+\makeatletter
+\renewcommand{\fnum@figure}{Abb. \thefigure}
+\makeatother
+\addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
 
 \usepackage{xurl}
 \usepackage{hyperref}
 
-\addto\extrasngerman{
-    \let\subsectionautorefname\sectionautorefname
-    \let\subsubsectionautorefname\sectionautorefname
-}
+\usepackage[htt]{hyphenat}
 
 % \enquote{}
 \usepackage{csquotes}
 
-\usepackage{longtable}
-\usepackage{array}
+% \usepackage{longtable}
+% \usepackage{array}
 
-\usepackage{tocloft}
-\usepackage[nottoc]{tocbibind}
-\setcounter{secnumdepth}{3}
-\tocloftpagestyle{empty}
+% \usepackage{graphicx}
+% \usepackage{subfig}
+% \usepackage{subcaption}
+% \usepackage{float}
 
-\usepackage{graphicx}
-\usepackage{subfig}
-\usepackage{caption,subcaption}
-\usepackage{float}
-
-\usepackage{mathtools}
-\usepackage{tikz-cd}
-\usetikzlibrary{babel}
-\usepackage{amsbsy} % bold maths symbols, \bm{} or \pmb{}
+% \usepackage{mathtools}
+% \usepackage{tikz-cd}
+% \usetikzlibrary{babel}
+% \usepackage{amsbsy} % bold maths symbols, \bm{} or \pmb{}
 
 % Codeblocks
 \usepackage{listings}
