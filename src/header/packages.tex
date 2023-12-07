@@ -13,9 +13,13 @@
 \renewcommand{\fnum@figure}{Abb. \thefigure}
 \makeatother
 \addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
+\renewcommand{\figureautorefname}{Abbildung}
 
 \usepackage{xurl}
 \usepackage{hyperref}
+
+\renewcommand{\sectionautorefname}{Abschnitt}
+\renewcommand{\subsectionautorefname}{Abschnitt}
 
 \usepackage[htt]{hyphenat}
 
@@ -38,6 +42,7 @@
 % Codeblocks
 \usepackage{listings}
 \usepackage[newfloat]{minted}
+\SetupFloatingEnvironment{listing}{name=Quellcode}
 
 \usepackage{soul}
 
