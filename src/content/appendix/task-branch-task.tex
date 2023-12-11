@@ -1,0 +1,57 @@
+% !TeX root = ../../../01_git-vorgehensmodelle.tex
+
+\section{Aufgabe: Branching Strategien}
+\label{sec:task:task-branch}
+
+\begin{enumerate}
+    \item Erstellen Sie ein neues Repository.
+
+    \item Erstellen Sie ein \enquote{Hello World}-Programm in einer Programmiersprache Ihrer Wahl.
+
+    \item Fügen die dieses Programm als initialen Commit Ihrem Repository hinzu.
+
+\end{enumerate}
+
+\subsection{Feature\hyp Branching}
+
+\begin{enumerate}
+    \item Erstellen Sie einen neuen Feature\hyp Branch.
+
+    \item Bauen Sie einen Fehler in Ihr Programm auf dem Feature\hyp Branch ein.
+    
+    \item Testen Sie ob das Programm auf dem Haupt\hyp Branch noch funktionsfähig ist.
+    
+    \item Beheben Sie den Fehler auf dem Feature\hyp Branch und ändern Sie \enquote{Hello World} zu \enquote{Hallo Welt}.
+    
+    \item Erstellen Sie einen Pull Request.
+    
+    \item Bestätigen Sie Ihren Pull Request und testen Sie ob die Änderung nun auf dem Haupt\hyp Branch übertragen wurde.
+\end{enumerate}
+
+\subsection{Release\hyp Branching}
+
+\begin{enumerate}
+    \item Erstellen Sie einen neuen Release\hyp Branch.
+
+    \item Fügen Sie zusätzlich zu \enquote{Hallo Welt} die Textausgabe \enquote{Release 1} hinzu.
+    
+    \item Testen Sie ob das Programm auf dem Haupt\hyp Branch noch funktionsfähig ist.
+    
+    \item Erstellen Sie einen neuen Hotfix\hyp Branch.
+    
+    \item Ändern Sie \enquote{Hallo Welt} zu \enquote{Hallo Welt!}.
+
+    \item Fügen Sie die Änderung durch einen Merge dem Haupt- und dem Release\hyp Branch hinzu.
+    
+    \item Testen Sie auf dem Haupt- und dem Release\hyp Branch ob Ihre Änderung wirksam ist.
+\end{enumerate}
+
+\subsection{Task\hyp Branching}
+
+\begin{enumerate}
+    \item Erstellen Sie ein neues Ticket / Issue in welchem beschrieben wird, dass dem \enquote{Hallo Welt!} zwei weitere Ausrufezeichen angehängt werden sollten.
+
+    \item Erstellen Sie einen neuen Branch und benennen ihn entsprechend.
+    
+    \item Prüfen Sie ob der Git\hyp Host\hyp Service Ihrer Wahl eine Verknüpfung zwischen dem Ticket / Issue und dem Branch hergestellt hat.
+\end{enumerate}
