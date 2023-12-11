@@ -10,7 +10,13 @@ variables:
 
 build:
   script:
+    # find all cite commands, list in .aux, bib-style
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
+    # create .bbl
+    - bibtex $MAIN_TEX_FILE
+    # read .bbl
+    - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
+    # resolve references
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
   
   after_script:
