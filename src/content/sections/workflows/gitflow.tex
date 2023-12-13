@@ -7,7 +7,7 @@ Ein weiteres Vorgehensmodell, welches versucht, die in \autoref{sec:einleitung} 
 
 Das Vorgehensmodell basiert auf einem zentralen \emph{Single\hyp Source\hyp of\hyp Truth} Repository, auf dem die langlebigen Branches liegen und meist \texttt{origin} genannt wird. Daher herrscht eine Push\hyp Pull\hyp Beziehung zwischen Entwickelnden und \texttt{origin}, wobei ein Austausch unter den Teams nicht ausgeschlossen ist~\cite{driessenSuccessfulGitBranching2010}.
 
-Gitflow setzt auf dem Feature\hyp Branch\hyp Vorgehensmodell (vgl. \autoref{sec:workflows:task}) auf. Es werden ebenfalls \texttt{main} als Haupt\hyp Branch und verschiedene Feature\hyp Branches verwendet. Zusätzlich wird ein zweiter langlebiger Branch -- \texttt{develop} -- und drei weitere unterstützende, kurzlebige Branch\hyp Arten -- Feature, Release und Hotfix -- definiert~\cite{driessenSuccessfulGitBranching2010}.
+Gitflow setzt auf dem Feature\hyp Branch\hyp Vorgehensmodell (vgl. \autoref{sec:workflows:branching}) auf. Es werden ebenfalls \texttt{main} als Haupt\hyp Branch und verschiedene Feature\hyp Branches verwendet. Zusätzlich wird ein zweiter langlebiger Branch -- \texttt{develop} -- und drei weitere unterstützende, kurzlebige Branch\hyp Arten -- Feature, Release und Hotfix -- definiert~\cite{driessenSuccessfulGitBranching2010}.
 
 Den unterschiedlichen unterstützenden Branches wird je eine dedizierte Rolle zugeteilt. Diese unterliegen strikten Regeln zu deren Ursprung und Merge\hyp Ziel. Nach deren Merge in das jeweilige definierte Ziel werden die Branches wieder gelöscht~\cite{driessenSuccessfulGitBranching2010}.
 
@@ -31,13 +31,13 @@ Die jeweiligen Branches können entweder manuell (\texttt{git checkout -b \{deve
 
 \subsubsection{Feature-Branches}
 
-Feature\hyp Branches werden von \texttt{develop} abgezweigt. Diese dienen dem gleichen Zweck, wie im Feature\hyp Branching\hyp Workflow: der Entwicklung von neuen Funktionen (vgl. \autoref{sec:workflows:task}). Der zugehörige Release muss bei Beginn des Branches nicht zwingend bekannt sein~\cite{driessenSuccessfulGitBranching2010}, da der \texttt{develop}\hyp Branch dem Zwischenstand des \emph{nächsten} Releases entspricht~\cite{atlassianGitflowWorkflow}.
+Feature\hyp Branches werden von \texttt{develop} abgezweigt. Diese dienen dem gleichen Zweck, wie im Feature\hyp Branching\hyp Workflow: der Entwicklung von neuen Funktionen (vgl. \autoref{sec:workflows:branching}). Der zugehörige Release muss bei Beginn des Branches nicht zwingend bekannt sein~\cite{driessenSuccessfulGitBranching2010}, da der \texttt{develop}\hyp Branch dem Zwischenstand des \emph{nächsten} Releases entspricht~\cite{atlassianGitflowWorkflow}.
 
 Der jeweilige Feature\hyp Branch kann entweder manuell mittels \texttt{git checkout -b <branch-name> develop} oder mittels \texttt{git flow feature start <branch-name>} erstellt werden~\cite{driessenGitflow2012}.
 
 Nach Fertigstellung des dazugehörigen Features wird der Branch mittels no\hyp fast\hyp forward\hyp Merge (\verb|--no-ff|) oder \texttt{git flow feature finish <branch-name>} in \texttt{develop} integriert~\cite{driessenSuccessfulGitBranching2010,driessenGitflow2012}. Somit wird genau ein Commit\hyp Objekt pro Feature erstellt, wodurch nachvollziehbar ist, welcher Commit zu welchem Feature und vice versa gehört~\cite{driessenSuccessfulGitBranching2010}. Dadurch wird die Übersichtlichkeit erhöht und potenzielle Reverts vereinfacht. Allerdings sind die Commits dadurch größer, wodurch verschiedene Nachteile entstehen können, wie bspw. eine erhöhte Kompliziertheit beim Revert von fehlerhaften Commits.
 
-Insgesamt verhält sich diese Branch\hyp Art identisch zum Feature\hyp Branching\hyp Modell (vgl. \autoref{sec:workflows:task}) mit der Ausnahme, dass es es in Gitflow keinerlei Interaktion zu \texttt{main} gibt. Die Rolle von \texttt{main} im Feature\hyp Branching wird durch \texttt{develop} eingenommen.
+Insgesamt verhält sich diese Branch\hyp Art identisch zum Feature\hyp Branching\hyp Modell (vgl. \autoref{sec:workflows:branching}) mit der Ausnahme, dass es es in Gitflow keinerlei Interaktion zu \texttt{main} gibt. Die Rolle von \texttt{main} im Feature\hyp Branching wird durch \texttt{develop} eingenommen.
 
 Ein Beispiel für zwei Feature\hyp Branches ist in \autoref{fig:gitflow:feature} dargestellt. Dabei sind bereits zwei Features auf \texttt{develop} integriert, welche durch die beiden Commits angedeutet werden. Anschließend werden zwei Feature\hyp Branches von \texttt{develop} abgezweigt, auf denen parallel gearbeitet wird. Anschließend werden beide zurück in \texttt{develop} integriert.
 
