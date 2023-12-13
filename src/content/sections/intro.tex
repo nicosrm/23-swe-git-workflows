@@ -3,38 +3,27 @@
 \setcounter{page}{1}
 
 \section{Einleitung}
-\label{sec:einleitung}
-
-\lipsum[1]
-
-\url{https://www.atlassian.com/git/tutorials/comparing-workflows}
-
-
-
-% ------------------------
-% MOTIVATION
-% ------------------------
-
-\subsection{Motivation}
 \label{sec:einleitung:motivation}
 
-\hl{\textbf{hier Probleme sammeln}}
+In der heutigen Softwareentwicklung spielt Git als Versionskontrollsystem (VCS), welches sich als das aktuell meistgenutzte VCS etabliert hat, eine zentrale Rolle. Git ermöglicht eine effiziente Verwaltung von Quellcode und die Zusammenarbeit in großen Entwicklungsteams. Dabei spielt die Wahl eines passenden Vorgehensmodells für den Projekterfolg eine wichtige Rolle. Diese Entscheidung ist komplex und hängt von einer Vielzahl von Faktoren ab. Die vorliegende Arbeit zielt darauf ab, Leser:innen bei der Auswahl eines geeigneten Modells zu unterstützen.
 
-\begin{itemize}
-    \item Entwickler:innen produzieren unterschiedlich hohe Codequalitäten $\to$ wie kann Codequalität dennoch insgesamt hoch gehalten werden?
-    \item erschwerte Kommunikation, bspw. unterschiedliche Büros, Zeitzonen, Teams, Sprachen, Kulturen etc.
-    \item schwierige Koordination von vielen Aufgaben durch eine große Zahl an Entwickler:innen
-    \item stark wachsender Quellcode $\to$ Unübersichtlichkeit des Projekts
-    \item Gewährleistung von Standards, Zertifizierungen etc. von kritischer Software
-\end{itemize}
+Git legt einen Fokus auf Flexibilität und verzichtet darauf, den Anwender:innen einen vorgefertigten, standardisierten Prozess für den Einsatz vorzuschreiben~\cite{atlassianComparingGitWorkflows2023}. Daraus entsteht für die Entwicklungsteams die Möglichkeit, eigene Prozesse zu schaffen und damit den Entwicklungsprozess effizienter zu gestalten. 
 
+Diese Prozesse müssen jedoch im Entwicklungsteam einheitlich definiert sein, da die resultierenden Uneinheitlichkeit andernfalls zu Herausforderungen führen können~\cite{gitlabg.v.WhatGitWorkflow2023}. In großen Teams ist es wichtig, einen Konsens über den Änderungsfluss zu finden, um eine reibungslose Zusammenarbeit zu gewährleisten. Daher sollte ein gemeinsamer Ansatz definiert und sichergestellt werden, sodass alle Teammitglieder mit dem gewählten Workflow vertraut sind~\cite{atlassianComparingGitWorkflows2023}.
 
+Da die unterschiedlichen Vorgehensmodelle zusätzlich zur Einheitlichkeit auch das Ziel verfolgen, den Entwicklungsprozess effizienter zu gestalten, sollte nicht nur ein einheitliches, sondern auch ein zu der Arbeitsumgebung passendes Vorgehensmodell gewählt werden. 
+Das Vorgehensmodell sollte dabei das Mindset und die Kultur des Team wiederspiegeln, um so die Effizienz des Teams ohne Beschränkungen zu erhöhen. Da jede Arbeitsumgebung individuell ist, kann kein Vorgehensmodell jeden Kontext abdecken.
 
-% ------------------------
-% AUFBAU
-% ------------------------
+Die im Abschnitt \autoref{sec:workflows} beschriebenen, häufig genutzten, Vorgehensmodelle dienen daher eher als Empfehlungen und Richtlinien, welche für jeden Einsatz entsprechen angepasst werden sollten und daher nicht als konkrete Regel zu verstehen sind. Sie dienen vielmehr als Basis für die Entwicklung eines auf die Arbeitsumgebung zugeschnittenen Vorgehensmodells~\cite{atlassianComparingGitWorkflows2023}.
 
-\subsection{Aufbau}
-\label{sec:einleitung:aufbau}
+Um aus diesen Richtlinien ein adäquates Vorgehensmodell zu konzipieren, ist es entscheidend, dass das Team ein Verständnis dafür entwickelt, wie die gängigen Modelle strukturiert sind, welchen Zweck sie verfolgen und in welchen Merkmalen sie sich unterscheiden. Hierbei ist zu berücksichtigen, wie gut ein Vorgehensmodell mit der Team\hyp Größe skaliert, um potenziell auch in einem wachsenden Team nachhaltig effizient zu bleiben. Zusätzlich ist von Bedeutung zu evaluieren, welcher kognitive Overhead durch die Anwendung eines Modells entsteht und ob dieser dem Team zumutbar ist.
 
-\lipsum[3]
+Ebenso ist zu bedenken, ob bei der Wahl des Vorgehensmodells der Schwerpunkt darauf liegt, eine übersichtliche Änderungshistorie sicherzustellen oder eher darauf, den Aufwand für die Behebung bzw. den Revert von Fehlern möglichst gering zu halten. Erfordert das Projekt ein besonderes Release\hyp Konzept, muss auch dieser Punkt bei der Wahl des Vorgehensmodells beachtet werden, da einige der Modelle besser mit bestimmten Release\hyp Konzepten kompatibel sind als andere. Mit der vermehrten Integration von Continuous Integration \& Delivery (CI/CD) ist auch dieser Aspekt ein wichtiger Faktor bei der Wahl des Vorgehensmodells.
+
+Das Ziel dieser Arbeit ist damit, den Leser:innen die Informationen zur Verfügung zu stellen, die notwendig sind, um eine qualifizierte Entscheidung treffen zu können. Die Absicht dabei ist nicht nur, theoretische Konzepte zu vermitteln, sondern auch praktische Übungsszenarien anzubieten, die unmittelbar in der Softwareentwicklung anwendbar sind. 
+
+Die Arbeit richtet sich insbesondere an Entwickler:innen, die bereits über grundlegende Kenntnisse in der Anwendung von Versionskontrollsystemen, insbesondere Git, verfügen. Dabei werden Vorkenntnisse im Umgang mit Git vorausgesetzt, um die Thematik der verschiedenen Vorgehensmodelle tiefgründig zu erfassen. Die Leser:innen sollten über ein Verständnis der grundlegenden Git\hyp Konzepte, wie Branching, Merging und Commits, verfügen, um die Diskussion und Analyse der verschiedenen Vorgehensmodelle nachvollziehen zu können. Darüber hinaus sind Erfahrungen im Bereich der Zusammenarbeit innerhalb von Entwicklungsteams und der Anwendung von Git in realen Projektszenarien von Vorteil, um die praxisnahen Empfehlungen und Erklärungen effektiv anwenden zu können.
+
+Dafür werden zunächst die Konzepte verschiedener Workflows in \autoref{sec:workflows} dargelegt. Zuerst werden grundlegende Branching\hyp Strategien und anschließend das darauf aufbauende Gitflow\hyp Vorgehensmodell erläutert. Folgend werden die Konzepte der Trunk\hyp based Development und des Forking\hyp Workflows behandelt.
+
+Weiterhin werden die vorgestellten Vorgehensmodelle anhand oben genannter Kriterien diskutiert und Empfehlungen für verschiedene Einsatzszenarien gelegt. Abschließend wird die Arbeit zusammengefasst.
