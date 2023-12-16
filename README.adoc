@@ -32,5 +32,5 @@ Die Arbeit kommt zur Erkenntnis, dass Gitflow und Trunk-based Development als Ba
 | link:LICENSE[CC BY 4.0]
 
 | Präsentationstermin
-| 12. Dezember 2023
+| 19. Dezember 2023
 |===
