@@ -23,7 +23,7 @@ Die Arbeit kommt zur Erkenntnis, dass Gitflow und Trunk-based Development als Ba
 | https://gitlab.dit.htwk-leipzig.de/23-swe-thema-1/abgabe/-/jobs/artifacts/main/raw/01-Git_Vorgehensmodelle.pdf?job=build[PDF-Version], link:01_git-vorgehensmodelle.tex[LaTeX-Datei]
 
 | Präsentation
-| TBA
+| link:presentation.pdf[PDF-Version]
 
 | Kontext
 | Modul “Software Engineering” (Prof. Dr. Andreas Both, Wintersemester 2023/2024) an der HTWK Leipzig
