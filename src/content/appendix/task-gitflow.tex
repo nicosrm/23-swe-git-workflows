@@ -6,7 +6,7 @@
 \begin{enumerate}
     \item Erstellen Sie ein neues Repository und alle langlebigen Branches, die für Gitflow benötigt werden.
     
-    \item Sie bekommen ein Ticket, welches verlangt, dass ein Sortieralgorithmus als neue Funktion implementiert werden soll. Zum Test soll ein Array der Länge 100 sortiert werden. Erstellen Sie mind. einen entsprechenden Commit auf dem für diesen Workflow entsprechenden Branch.
+    \item Sie bekommen ein Ticket, welches verlangt, dass ein Sortieralgorithmus als neue Funktion implementiert werden soll. Zum Test soll ein Array der Länge 100 sortiert werden. Erstellen Sie mind. einen entsprechenden Commit auf dem für diesen Workflow entsprechenden Branch. \label{item:task:gitflow:sorting-algorithm}
     
     \item Integrieren Sie die Implementierung auf den oder die vorgesehenen Branches. Das Ticket ist für den nächsten Release angesetzt.
     
@@ -20,5 +20,19 @@
     
     \item Das Release\hyp Team hat den Release freigegeben. Verfahren Sie entsprechend des Workflows.
     
-    \item Es wurde ein kritischer Fehler im letzten Release gefunden! Es soll nicht \verb|Hello, World!| sondern \verb|Hello, WORLD!| ausgegeben werden. Beheben Sie diesen kritischen Fehler in der \emph{Production}-Version. Die neue Version soll \verb|0.2.1| sein. Verfahren Sie entsprechend des Workflows.
+    \item Es wurde ein kritischer Fehler im letzten Release gefunden! Es soll nicht \verb|Hello, World!| sondern \verb|Hello, WORLD!| ausgegeben werden. Beheben Sie diesen kritischen Fehler in der \emph{Production}-Version. Die neue Version soll \verb|0.2.1| sein. Verfahren Sie entsprechend des Workflows. \label{item:task:gitflow:hotfix}
 \end{enumerate}
+
+Kontrollfragen:
+
+\begin{itemize}
+    \item Haben Sie insgesamt zwei langlebige Branches erstellt? Prüfen Sie anhand von \autoref{sec:workflows:gitflow}.
+    
+    \item Auf welchen Branch wurde das Feature aus (\ref{item:task:gitflow:sorting-algorithm}) direkt integriert? Ab welcher Stelle ist die Änderung in der veröffentlichten Version zu sehen?
+    
+    \item Ist der Hotfix aus (\ref{item:task:gitflow:hotfix}) auf allen relevanten Branches vorhanden?
+    
+    \item Welche Tags sind auf den langlebigen nach Durchführung der Aufgabe vorhanden? Welche Rolle spielen die jeweiligen langlebigen Branches?
+    
+    \item Welche Branches sind nach Durchführung der Aufgabe noch vorhanden?
+\end{itemize}
