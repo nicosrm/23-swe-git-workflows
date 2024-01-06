@@ -7,7 +7,7 @@ Die vorliegende Arbeit widmet sich verschiedenen Git-Vorgehensmodellen, die für
 
 Im ersten Teil der Arbeit werden die ausgewählten Git-Vorgehensmodelle im Einzelnen vorgestellt. Im Anschluss erfolgt eine Gegenüberstellung und Bewertung der verschiedenen Vorgehensmodelle anhand ausgewählter Kriterien. Dadurch sollen die Leser:innen in die Lage versetzt werden, die Stärken und Schwächen der verschiedenen Ansätze zu verstehen und entsprechende Entscheidungen für die Auswahl eines geeigneten Vorgehensmodells in Abhängigkeit von den Projektanforderungen zu treffen.
 
-Die Arbeit kommt zur Erkenntnis, dass Gitflow und Trunk-based Development als Basis-Workflow für unterschiedliche Szenarien geeignet sind. Diese sollten jedoch an den entsprechenden Team- und Projektkontext angepasst werden. Für Open-Source-Projekte eignet sich zusätzlich der Forking Workflow als übergeordnetes Vorgehensmodell.
+Die Arbeit kommt zur Erkenntnis, dass Gitflow und Trunk-based Development als Basis-Workflow für unterschiedliche Szenarien geeignet sind. Diese sollten jedoch an den entsprechenden Team- und Projektkontext angepasst werden. Für Open-Source-Projekte eignet sich zusätzlich der Forking-Workflow als übergeordnetes Vorgehensmodell.
 
 == Kontext
 

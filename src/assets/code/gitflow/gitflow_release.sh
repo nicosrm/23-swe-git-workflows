@@ -1,5 +1,5 @@
 # manuell
-git checkout -b release/1.3 develop
+$ git checkout -b release/1.3 develop
 # <Arbeit auf Release-Branch>
 $ git switch main
 $ git merge release/1.3 --no-ff

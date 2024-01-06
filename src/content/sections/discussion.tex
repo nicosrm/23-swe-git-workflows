@@ -24,20 +24,22 @@ Im folgenden Abschnitt werden die einzelnen Workflows diskutiert. Außerdem soll
 
 \subsection{Kognitiver Overhead}
 
-Bei der Betrachtung des kognitiven Overheads fällt vorrangig Gitflow auf. Es werden strikte Regeln für jegliche Prozesse im Umgang mit git aufgestellt, wie bspw. den Ursprung, das Merge\hyp Ziel, die Benennung von Branches usw. Diese Abläufe müssen den Entwickelnden zu Beginn vermittelt und dem Workflow entsprechend strikt eingehalten werden.
+Bei der Betrachtung des kognitiven Overheads fällt vorrangig Gitflow auf. Es werden strikte Regeln für jegliche Prozesse im Umgang mit Git aufgestellt, wie bspw. den Ursprung, das Merge\hyp Ziel, die Benennung von Branches usw. Diese Abläufe müssen den Entwickelnden zu Beginn vermittelt und dem Workflow entsprechend strikt eingehalten werden.
 
 Eine solche Menge an strikten Vorgaben treten bei den anderen, im Verlauf dieses Papers betrachteten Workflows nicht auf. Der kognitive Overhead ist daher bei jenen als gering einzustufen.
 
 
 \subsection{Kultur und Skalierbarkeit des Teams}
 
-Die Feature- und Task\hyp Branching \hyp Workflows stellen wenige Regeln auf, wodurch die Übersichtlichkeit nicht negativ beeinflusst wird. Dadurch wird kein hoher Erfahrungsgrad der Entwickelnden vorausgesetzt. Diese können durch den effektiven Einsatz von Pull Requests sowie Issues und den damit verbundenen Review\hyp Prozessen sogar stark voneinander abweichen und die Kommunikation innerhalb des Teams erleichtern. Außerdem skalieren diese Workflows folglich mit der Team\hyp Größe.
+Die Feature- und Task\hyp Branching\hyp Workflows stellen wenige Regeln auf, wodurch die Übersichtlichkeit nicht negativ beeinflusst wird. Dadurch wird kein hoher Erfahrungsgrad der Entwickelnden vorausgesetzt. Diese können durch den effektiven Einsatz von Pull Requests sowie Issues und den damit verbundenen Review\hyp Prozessen sogar stark voneinander abweichen und die Kommunikation innerhalb des Teams erleichtern. Außerdem skalieren diese Workflows folglich mit der Team\hyp Größe.
 
-Beim Release\hyp Workflow ist eine hohe Kommunikation notwendig, da dieser ausschließlich Vorgaben zum Release\hyp Prozess aufstellt. Dies ist ebenfalls beim Einsatz von Trunk\hyp based Development der Fall. Hier ist eine hohe Kommunikation und ein starkes Vertrauen der Entwickelnden vorausgesetzt, da diese selbst für die nötige Codequalität sorgen müssen. Dadurch ist ein hoher Erfahrungsgrad entscheidend, da auf Pull Requests gänzlich verzichtet wird. Da alle Entwickelnden auf dem Haupt\hyp Branch arbeiten, ist kaum eine Skalierung mit der Team\hyp Größe möglich, weshalb dieser Workflow sich ausschließlich für kleine Teams eignet.
+Beim Release\hyp Workflow ist eine hohe Kommunikation notwendig, da dieser hauptsächlich Vorgaben zum Release\hyp Prozess aufstellt. 
 
-Im Kontrast dazu ist Gitflow durch die strikten Vorgaben und Aufteilung der Branch\hyp Rollen sehr gut skalierbar. Kommunikation ist nur innerhalb von kleineren Teams notwendig. Durch die Verwendung von Pull Requests und den verschiedenen Instanzen bis zum finalen Release eignet sich dieser Workflow für die Verwendung in Teams mit unterschiedlichen Erfahrungsgraden.
+Dies ist ebenfalls beim Einsatz von Trunk\hyp based Development der Fall. Hier ist eine hohe Kommunikation und ein starkes Vertrauen der Entwickelnden vorausgesetzt, da diese selbst für die nötige Codequalität sorgen müssen. Dadurch ist ein hoher Erfahrungsgrad entscheidend, da auf Pull Requests gänzlich verzichtet wird. Da alle Entwickelnden auf dem Haupt\hyp Branch arbeiten, ist kaum eine Skalierung mit der Team\hyp Größe möglich, weshalb dieser Workflow sich hauptsächlich für kleine Teams eignet.
 
-Ähnlich verhält es sich beim Forking\hyp Workflow. Durch die Möglichkeit der Rechte\hyp Trennung von Contributor und Maintainer genügt eine kleine Anzahl an Maintainer im Vergleich zu einer nahezu unbegrenzten Anzahl an Contributor. Dabei ist allerdings zu empfehlen, dass die Anzahl der Maintainer mit der Anzahl der Contributor skaliert, da diese sonst die Menge an Pull Requests nicht abarbeiten können. Durch den notwendigen Einsatz von Pull Requests ist kein Vertrauen und keine Bekanntschaft zwischen diesen beiden Gruppen vorausgesetzt. Außerdem werden durch den dabei inhärenten Code\hyp Review\hyp Prozess variierende Erfahrungsgrade vereinfacht. Folglich eignet sich dieser Workflow sehr gut für Open\hyp Source\hyp Projekte.
+Im Kontrast dazu ist Gitflow durch die strikten Vorgaben und Aufteilung der Branch\hyp Rollen sehr gut skalierbar. Häufige Kommunikation ist nur innerhalb von kleineren Teams innerhalb eines großen Projektteams notwendig. Durch die Verwendung von Pull Requests und den verschiedenen Instanzen bis zum finalen Release eignet sich dieser Workflow für die Verwendung in Teams mit unterschiedlichen Erfahrungsgraden.
+
+Ähnlich verhält es sich beim Forking\hyp Workflow. Durch die Möglichkeit der Rechte\hyp Trennung von Contributor und Maintainer genügt eine kleine Anzahl an Maintainer im Vergleich zu einer nahezu unbegrenzten Anzahl an Contributor. Dabei ist allerdings zu empfehlen, dass die Anzahl der Maintainer mit der Anzahl der Contributor skaliert, da diese sonst die Menge an Pull Requests nicht abarbeiten können. Durch den notwendigen Einsatz von Pull Requests ist kein Vertrauen und keine Bekanntschaft zwischen diesen beiden Gruppen vorausgesetzt. Außerdem werden durch den dabei inhärenten Code\hyp Review\hyp Prozess variierende Erfahrungsgrade vereinfacht. Folglich eignet sich dieser Workflow sehr gut für Open\hyp Source\hyp Projekte oder jene mit einer niedrigen Koordination.
 
 
 \subsection{Release\hyp Zyklus und Delivery}
@@ -60,15 +62,15 @@ Da Trunk\hyp based Development auf eine schnelle Integration ausgelegt ist, wird
 
 \subsection{Übersichtlichkeit}
 
-Durch die Verwendung von Branches für die Änderung am Code wird die Übersichtlichkeit grundsätzlich verbessert. Beim Task\hyp Branching ist vorgegeben, dass jeder Branch zu einem Issue zurückverfolgbar sein muss, wodurch die Übersichtlichkeit verbessert werden kann.
+Durch die Verwendung von Branches für die Änderung am Code wird die Übersichtlichkeit grundsätzlich im Vergleich zu keinem Einsatz von Branches verbessert. Beim Task\hyp Branching ist vorgegeben, dass jeder Branch zu einem Issue zurückverfolgbar sein muss, wodurch die Übersichtlichkeit verbessert werden kann.
 
-Aufgrund der vielen langlebigen Release\hyp Branches beim Release\hyp Branching\hyp Workflow kann die Übersichtlichkeit schnell vermindert werden. Außerdem kann beim Backport von Fehlerbehebungen auf viele Release\hyp Branches der Git\hyp Graph sehr unübersichtlich werden.
+Aufgrund der vielen langlebigen Release\hyp Branches beim Release\hyp Branching\hyp Workflow kann die Übersichtlichkeit schnell vermindert werden. Außerdem kann beim \emph{Back\hyp Port} von Fehlerbehebungen auf viele Release\hyp Branches der Git\hyp Graph sehr unübersichtlich werden.
 
 Gitflow geht einen Mittelweg. Änderungen am Code werden auf dedizierten Branches entwickelt und als ein Commit gesammelt auf den \texttt{develop}- und \texttt{main}\hyp Branch integriert. Dadurch ist eine zusammengehörende Änderung genau einem Commit zuzuordnen. Dadurch können Fehler schnell zurückverfolgt und ein Revert von Änderungen vorgenommen werden.
 
-Durch den Einsatz von Feature Flags im Trunk\hyp based Development wird eine hohe Integrationsgeschwindigkeit gewährleistet. Bei einer hohen Anzahl an Entwickelnden kann der Code allerdings schnell an Übersichtlichkeit verlieren. Durch den empfohlenen Einsatz von automatisierten Tests mittels Continuous Integration können grobe Fehler schnell erkannt werden, welche durch die hoch erfahrenen Entwickelnden priorisiert behoben werden können.
+Durch den Einsatz von Feature Flags im Trunk\hyp based Development wird eine hohe Integrationsgeschwindigkeit ermöglicht. Bei einer hohen Anzahl an Entwickelnden kann der Code allerdings schnell an Übersichtlichkeit verlieren. Durch den empfohlenen Einsatz von automatisierten Tests mittels Continuous Integration können grobe Fehler schnell erkannt werden, welche durch die hoch erfahrenen Entwickelnden priorisiert behoben werden können.
 
-Im Forking\hyp Workflow werden Pull Requests gezwungenermaßen erstellt. Dadurch sind die Änderungen gekapselt und können unter der Prämisse von Squashing übersichtlich in den Code integriert werden. Außerdem geben die Pull Requests die Möglichkeit von Code\hyp Reviews, welche hier stattfinden sollten. Dadurch kann die Fehleranfälligkeit vermindert und die Codequalität hoch gehalten werden.
+Im Forking\hyp Workflow werden Pull Requests gezwungenermaßen erstellt. Dadurch sind die Änderungen gekapselt und können unter der Prämisse von \emph{Squashing} (vgl.~\cite{githubincPullRequestMerges2024}) übersichtlich in den Code integriert werden. Außerdem geben die Pull Requests die Möglichkeit von Code\hyp Reviews, welche hier stattfinden sollten. Dadurch kann die Fehleranfälligkeit vermindert und die Codequalität hoch gehalten werden.
 
 
 \subsection{Stabilität und Erfahrung}
@@ -88,15 +90,16 @@ Die Feature-, Task- und Forking\hyp Workflows treffen keine Aussagen zu Releases
 
 Im Gegensatz dazu ist Release\hyp Branching ein Release\hyp zentrierter Ansatz durch den Einsatz von Release\hyp Branches. Eine Besonderheit ist die Möglichkeit, mehrere Versionen zu unterstützen und zu pflegen. Dies ist der einzige hier betrachtete Workflow, der dies direkt unterstützt.
 
-Gitflow ist ebenfalls ein Release\hyp orientierter Workflow und verwendet Release\hyp Branches. Im Kontrast zum Release\hyp Branching dienen diese allerdings zur Vorbereitung von Releases und nicht zur Pflege dieser. Nachdem diese Tätigkeiten abgeschlossen sind, wird der Release\hyp Branch auf \texttt{main} integriert und gelöscht. Die vergangen Versionen können durch das Tagging zurückverfolgt werden. Allerdings ist keine parallele Verwaltung von mehreren Release\hyp Versionen vorgesehen. Dies kann allerdings durch eine Abwandlung des Workflows realisiert werden.
+Gitflow ist ebenfalls ein Release\hyp orientierter Workflow und verwendet Release\hyp Branches. Im Kontrast zum Release\hyp Branching dienen diese allerdings zur Vorbereitung von Releases und nicht zur Pflege dieser. Nachdem diese Tätigkeiten abgeschlossen sind, wird der Release\hyp Branch auf \texttt{main} und \texttt{develop} integriert und gelöscht. Die vergangen Versionen können durch das Tagging zurückverfolgt werden. Allerdings ist keine parallele Verwaltung von mehreren Release\hyp Versionen vorgesehen. Dies kann allerdings durch eine Abwandlung des Workflows realisiert werden.
 
-Trunk\hyp based Development unterstützt ebenfalls nur eine aktuelle Version. Im Unterschied zu den vorherigen Workflows wird jeder Commit auf den Trunk direkt veröffentlicht. Dabei ist vorgesehen, dass mehrmals am Tag kurzlebige Branches auf den Trunk integriert werden. Somit findet hier ein kontinuierlicher Release statt.
+Trunk\hyp based Development unterstützt ebenfalls nur eine aktuelle Version. Im Unterschied zu den vorherigen Workflows wird jeder Commit auf den Trunk direkt veröffentlicht. Dabei ist vorgesehen, dass kurzlebige Branches mehrmals am Tag in den Trunk integriert werden. Somit findet hier ein kontinuierlicher Release statt.
 
 
 \subsection{Fazit}
+\label{sec:diskussion:conclusion}
 
 Insgesamt sind die folgenden Erkenntnisse aus der aufgestellten Diskussion zu erlangen. Für kleinere, erfahrene Teams, welche schnell veröffentlichen und Feedback erhalten wollen, ist die Trunk\hyp based Development zu empfehlen. Für kleinere Teams mit verschiedenen Erfahrungsgraden kann Gitflow oder eine Kombination der in \autoref{sec:workflows:branching} vorgestellten Workflows verwendet werden. Für Open\hyp Source\hyp Projekte sollte der Forking\hyp Workflow als übergreifender Workflow in Kombination mit einem passenden Workflow für die Maintainer verwendet werden. Für alle anderen, aber besonders für große Teams, sollte Gitflow als Basis verwendet werden.
 
 Dabei ist anzumerken, dass jeder Workflow nur als Ausgangspunkt verwendet und an das Team bzw. Projekt angepasst werden sollte. So kann Gitflow bspw. so angepasst werden, dass mehrere Versionen parallel unterstützt werden, in dem die Release\hyp Branches nicht gelöscht werden. Außerdem kann die Delivery\hyp Geschwindigkeit variabel angepasst werden, sodass schnelle Release- und Feedback\hyp Zyklen ermöglicht werden.
 
-Abschließend fasst es Vincent Driessen, der Vater von Gitflow, passend zusammen: \enquote{Denken Sie abschließend immer daran, dass es keine Allheilmittel gibt. Berücksichtigen Sie Ihren eigenen Kontext~\cite{driessenGitflow2012}}.
+Abschließend fasst es Vincent Driessen, der Publizist von Gitflow, passend zusammen: \enquote{Denken Sie abschließend immer daran, dass es keine Allheilmittel gibt. Berücksichtigen Sie Ihren eigenen Kontext~\cite{driessenGitflow2012}}.

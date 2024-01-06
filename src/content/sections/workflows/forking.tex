@@ -5,49 +5,47 @@
 
 In großen Projekten mit vielen Entwickler:innen kann es zu einer Herausforderung werden, die große Anzahl an Änderungen zu koordinieren und zu vereinheitlichen -- besonders in Open\hyp Source\hyp Projekten, in denen unzählige Entwickler:innen mit unterschiedlichen Kenntnisständen, Ideen und Wünschen an einem Projekt mitwirken. Da die Projekte jedoch auf die freiwillige Mitarbeit der Entwickler:innen angewiesen sind, muss zudem die Einstiegshürde so niedrig wie möglich gehalten werden.
 
-Aufgrund dieser Herausforderungen hat sich der Forking\hyp Workflow bei Open\hyp Source\hyp Projekten etabliert.
+Aufgrund dieser Herausforderungen hat sich der Forking\hyp Workflow bei Open\hyp Source\hyp Projekten etabliert~\cite{atlassianForkingWorkflow}.
 
 
 \subsubsection{Ursprung des Forkings}
 
-Der Begriff \emph{Forking} beschreibt ursprünglich die Abspaltung eines Projektes in ein neues. Gründe dafür können zum Beispiel das Ende des ursprüngliche Projektes oder eine Unzufriedenheit eines Teils der Entwickler:innen mit den Projektverwaltenden sein~\cite{whyDoOpenSourceProjectsFork?}.
+Der Begriff \emph{Forking} beschreibt ursprünglich die Abspaltung eines Projektes in ein neues. Gründe dafür können zum Beispiel das Ende des ursprünglichen Projektes oder eine Unzufriedenheit eines Teils der Entwickler:innen mit den Projektverwaltenden sein~\cite{whyDoOpenSourceProjectsFork?}.
 
 Bei einer solchen Aufspaltung wird ein neuer sogenannter \emph{Fork} -- im rechtlichen Kontext auch \emph{Derivat} genannt -- erstellt. Dabei handelt es sich um eine Kopie des ursprünglichen Repositories. Das Projekt wird anschließend auf dem neuen Fork weiterentwickelt~\cite{devInsiderWasIstEinFork?}.
 
 
 \subsubsection{Forking als Workflow}
 
-Wie beim ursprünglichen Forking werden auch bei der Verwendung des Forking\hyp Workflows neue Kopien das Haupt\hyp Repositories erstellt, auf denen neue Features oder andere Änderungen entwickelt werden können. Der Unterschied besteht jedoch darin, dass die Änderungen in den Forks am Ende wieder in das ursprüngliche Repository übernommen werden sollen~\cite{gitHubInformationenZuForks}. So können auf den neuen Forks Ideen und Änderungen ausprobiert werden, bevor sie direkt in die Versionsverwaltung des Haupt\hyp Repositories aufgenommen werden~\cite{gitHubInformationenZuForks}.
+Wie beim ursprünglichen Forking werden auch bei der Verwendung des Forking\hyp Workflows neue Kopien des Haupt\hyp Repositories erstellt, auf denen neue Features oder andere Änderungen entwickelt werden können. Der Unterschied besteht jedoch darin, dass die Änderungen in den Forks am Ende wieder in das ursprüngliche Repository übernommen werden sollen~\cite{gitHubInformationenZuForks}. So können auf den neuen Forks Ideen und Änderungen ausprobiert werden, bevor sie direkt in die Versionsverwaltung des Haupt\hyp Repositories aufgenommen werden~\cite{gitHubInformationenZuForks}.
 
 Die Projektverwalter:innen müssen somit nicht allen Entwickelnden Schreibrechte für das Haupt\hyp Repository geben. Stattdessen kann sich jede:r Entwickler:in nach Belieben einen eigenen Fork erstellen und die jeweiligen Änderungen dort einpflegen. Diese werden dabei meist dem Gitflow (vgl. \autoref{sec:workflows:gitflow}) entsprechend implementiert~\cite{atlassianForkingWorkflow}.
 
-In vielen Open\hyp Source\hyp Projekten besitzen ausschließlich die Repository\hyp Verwalter:innen die Schreibrechte für das Haupt\hyp Repository. Wenn Änderungen aus einem Fork in das Haupt\hyp Repository übernommen werden sollen, muss ein Pull Request gestellt und von den Projektverwaltenden des Haupt\hyp Repositories angenommen werden~\cite{gitHubInformationenZuForks}. Zusätzlich kann der Erstellende des Pull Requests Schreibrechte an den Repository\hyp Verwaltenden der Upstream\hyp Repositories vergeben. Dadurch können diese Commits erstellen und den Fork somit für den Merge vorbereiten~\cite{gitHubInformationenZuForks}.
+In vielen Open\hyp Source\hyp Projekten besitzen ausschließlich die Repository\hyp Verwalter:innen die Schreibrechte für das Haupt\hyp Repository. Wenn Änderungen aus einem Fork in das Haupt\hyp Repository übernommen werden sollen, muss eine Pull Request gestellt und von den Projektverwaltenden des Haupt\hyp Repositories angenommen werden~\cite{gitHubInformationenZuForks}. Zusätzlich können Ersteller:innen von Pull Requests Schreibrechte für das eigene Repository an Haupt\hyp Repository\hyp Verwaltende vergeben. Dadurch können diese direkt Änderungen in dem entsprechenden Repository vornehmen, um den Verwaltungsaufwand möglichst gering zu halten~\cite{gitHubInformationenZuForks}.
 
 
 \subsubsection{Upstream\hyp Repositories}
 
-Da auch nach dem Erstellen eines Forks neue Änderungen in das Haupt\hyp Repository eingepflegt werden können, kann es schnell passieren, dass ein Fork den Anschluss verliert~\cite{atlassianForksAndUpstreams}. Aus diesem Grund wird im Fork das Haupt\hyp Repository als Upstream\hyp Repository hinzugefügt. Dadurch können die Änderungen im Haupt\hyp Repository mittels Merge oder Rebase in den Fork übernommen werden~\cite{atlassianForksAndUpstreams}.
+Da auch nach dem Erstellen eines Forks neue Änderungen in das Haupt\hyp Repository eingepflegt werden können, kann es schnell passieren, dass ein Fork den Anschluss verliert~\cite{atlassianForksAndUpstreams}. Aus diesem Grund wird im Fork das Haupt\hyp Repository als Upstream\hyp Repository hinzugefügt. Dadurch können die Änderungen im Haupt\hyp Repository mittels Merge in den Fork übernommen werden~\cite{atlassianForksAndUpstreams}.
 
 
 \subsubsection{Erstellen eines Forks}
 
-Es existiert kein eigener Befehl von git, um einen Fork eines Repositories zu erstellen. Für ein typisches Open\hyp Source\hyp Projekt, welches sowohl den Forking\hyp Workflow als auch dem Gitflow\hyp Workflow nutzt und auf einem Git\hyp Hosting\hyp Server zur Verfügung gestellt wird, ergeben sich daher folgende Schritte:
+Es existiert kein eigener Befehl von Git, um einen Fork eines Repositories zu erstellen. Für ein typisches Open\hyp Source\hyp Projekt, welches sowohl den Forking\hyp Workflow als auch dem Gitflow\hyp Workflow nutzt und auf einem Git\hyp Hosting\hyp Server zur Verfügung gestellt wird, ergeben sich daher folgende Schritte:
 
 \begin{itemize}
-    \item Eine Serverseitige Kopie des Haupt\hyp Repositories wird mit dem \texttt{git clone}-Befehl erstellt. Git Host Anbieter wie GitHub bieten dies dem Nutzer meist als automatisierte Funktion an.
+    \item Eine Serverseitige Kopie des Haupt\hyp Repositories wird mit dem \texttt{git clone}-Befehl erstellt. Git\hyp Host\hyp Anbieter wie GitHub bieten dies den Nutzer:innen meist als automatisierte Funktion an.
     
     \item Das neue Repository wird wieder mit dem \texttt{git clone}-Befehl auf das lokale System kopiert.
     
-    \item Das Haupt\hyp Repository wird dem neuen Repository als Upstream\hyp Repository hinzugefügt.
+    \item Das Haupt\hyp Repository wird -- falls nicht bereits automatisch geschehen -- dem neuen Repository als Upstream\hyp Repository hinzugefügt.
     
     \item Die Änderungen werden auf einem neuen Feature\hyp Branch hinzugefügt.
     
-    \item Im Haupt\hyp Repository wird ein Pull Request erstellt.
-    
-    \item Im besten Fall akzeptieren die Projektverwaltenden die Änderungen und übernehmen diese in das Haupt\hyp Repository.
+    \item Im Haupt\hyp Repository wird eine Pull Request erstellt, welche von den Projektverwaltenden überprüft wird. Ggf. auftretende Änderungswünsche werden diskutiert und implementiert. Schlussendlich wird die Änderung übernommen oder die Pull Request geschlossen.
 \end{itemize}
 
 
 \subsubsection{Fazit}
 
-Durch den Forking\hyp Workflow und das Kopieren des kompletten Repositories wird nicht nur die Codebasis, sondern auch die Versionsverwaltung gekapselt. Damit können Ideen und Änderungen entwickelt und erst später für die Übernahme in das Haupt\hyp Repository angeboten werden. Der Forking\hyp Workflow wird daher häufig in großen Open\hyp Source\hyp Projekten angewendet~\cite{github_inc_contributing_2023}.
+Durch den Forking\hyp Workflow und das Kopieren des kompletten Repositories wird nicht nur die Codebasis, sondern auch die Versionsverwaltung gekapselt. Damit können Ideen und Änderungen entwickelt und erst später für die Übernahme in das Haupt\hyp Repository angeboten werden. Der Forking\hyp Workflow wird daher häufig in großen Open\hyp Source\hyp Projekten oder solchen mit geringer Koordination angewendet~\cite{github_inc_contributing_2023}.
