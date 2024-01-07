@@ -34,7 +34,7 @@ Da die Unterschiede zwischen Feature\hyp Branches und dem Haupt\hyp Branch immer
 
 \subsubsection{Release\hyp Branching Strategie}
 
-Bei der \emph{Release\hyp Branching}\hyp Strategie wird vor jedem Release ein neuer Branch aus dem Haupt\hyp Branch erstellt. Auf diesem Branch können letzte Bugs behoben und Anpassungen vorgenommen werden ohne damit die Entwicklung der anderen Features zu stören ~\cite{tucker_basics_2023}. Nach dem Release werden die Änderungen auf dem Release\hyp Branch durch einen Merge in den Haupt\hyp Branch übernommen. Der Release\hyp Branch bleibt jedoch weiterhin erhalten. Ein Beispiel für diese Vorgehensweise ist in \autoref{fig:task_branch:release} dargestellt.
+Bei der \emph{Release\hyp Branching}\hyp Strategie wird vor jedem Release ein neuer Branch aus dem Haupt\hyp Branch erstellt. Auf diesem Branch können letzte Bugs behoben und Anpassungen vorgenommen werden ohne damit die Entwicklung der anderen Features zu stören ~\cite{tucker_basics_2023}. Der Release\hyp Branch bleibt dabei als langlebiger Branch dauerhaft erhalten. Dadurch können parallel laufende Versionen unterstützt werden~\cite{hart_besten_2020}. Ein Beispiel für diese Vorgehensweise ist in \autoref{fig:task_branch:release} dargestellt.
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{src/assets/diagrams/task_branch/release-branch.pdf}
@@ -43,12 +43,12 @@ Bei der \emph{Release\hyp Branching}\hyp Strategie wird vor jedem Release ein ne
     \Description{In der Abbildung ist ein Git\hyp Graph dargestellt, welcher die Branches main, release1 und release2 beinhaltet. Letztere werden jeweils von main abgezweigt und bleiben für den Rest der Entwicklung erhalten.}
 \end{figure}
 
-Dabei ist zu erkennen, dass der Branch \texttt{release1} für den ersten Release erstellt erstellt wird. Danach wird auf dem \texttt{main}\hyp Branch weiterentwickelt, ohne dass der \texttt{release1}-Branch gelöscht wird. Anschließend kommt es zu einem zweiten Release, wobei jeder Release einen zugehörigen Branch behält. Zudem ist zu erkennen, dass auf beiden Release\hyp Branches weitere Änderungen hinzugefügt werden, die für den Release notwendig sind.
+Dabei ist zu erkennen, dass der Branch \texttt{release1} für den ersten Release erstellt wird. Danach wird auf dem \texttt{main}\hyp Branch weiterentwickelt, ohne dass der \texttt{release1}-Branch gelöscht wird. Anschließend kommt es zu einem zweiten Release, wobei jeder Release einen zugehörigen Branch behält. Zudem ist zu erkennen, dass auf beiden Release\hyp Branches weitere Änderungen hinzugefügt werden, die für den Release notwendig sind.
 Für Projekte, in denen mehrere Versionen parallel unterstützt werden sollen, ist dieses Vorgehen notwendig, da durch eigene Release\hyp Branches spezifische Probleme der jeweilige Version später leicht behoben werden können~\cite{hart_besten_2020}.
 
-Wenn nach einem Release weitere Hotfixes nötig sind, können diese auf einem Hotfix\hyp Branch implementiert werden. Diese müssen anschließend durch eine Pull Request bzw. Merge sowohl in den Release- als auch in den Haupt\hyp Branch übernommen werden~\cite{tucker_basics_2023}.
+Falls gewünscht, können die Änderungen auf dem Release\hyp Branch in den Haupt\hyp Branch übernommen werden. Dazu existieren unterschiedliche Vorgehensweisen. Zum einen können die Änderungen durch eine Pull\hyp Request bzw. Merge in den Haupt\hyp Branch übernommen werden. Der Release\hyp Branch muss dabei jedoch auch nach dem Merge erhalten bleiben~\cite{tucker_basics_2023}. Alternativ können jedoch auch nur die gewünschten Änderungen per Cherry\hyp Pick in den Haupt\hyp Branch übernommen werden~\cite{vijayma_git_2022}.
 
-Ein Nachteil der Release\hyp Branching\hyp Strategie besteht darin, dass die Arbeit mit vielen parallelen Branches die Pflege des Repositories erschwert. So müssen Hotfixes häufig per Merge in mehrere Release\hyp Branches übernommen oder sogar für unterschiedliche Releases gesondert entwickelt werden~\cite{hart_besten_2020}.
+Ein Nachteil der Release\hyp Branching\hyp Strategie besteht darin, dass die Arbeit mit vielen parallelen Branches die Pflege des Repositories erschwert. So müssen Hotfixes häufig per Merge oder Cherry\hyp Pick in mehrere Release\hyp Branches übernommen oder sogar für unterschiedliche Releases gesondert entwickelt werden~\cite{hart_besten_2020}.
 
 
 \subsubsection{Task\hyp Branching\hyp Strategie}
