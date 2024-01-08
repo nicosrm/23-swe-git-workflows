@@ -17,33 +17,31 @@
 \begin{enumerate}
     \item Erstellen Sie einen neuen Feature\hyp Branch.
 
-    \item Bauen Sie einen Fehler in Ihr Programm auf dem Feature\hyp Branch ein.
+    \item Wechseln Sie auf den neuen Feature\hyp Branch und bauen Sie hier einen Fehler in Ihr Programm ein.
     
-    \item Testen Sie ob das Programm auf dem Haupt\hyp Branch noch funktionsfähig ist.
+    \item Wechseln Sie auf den Haupt\hyp Branch und testen Sie ob ihr Programm noch funktionsfähig ist.
     
     \item Beheben Sie den Fehler auf dem Feature\hyp Branch und ändern Sie \enquote{Hello World} zu \enquote{Hallo Welt}.
     
-    \item Erstellen Sie einen Pull Request.
+    \item Erstellen Sie eine Pull Request.
     
-    \item Bestätigen Sie Ihren Pull Request und testen Sie ob die Änderung nun auf dem Haupt\hyp Branch übertragen wurde.
+    \item Bestätigen Sie Ihre Pull Request und testen Sie ob die Änderung nun auf dem Haupt\hyp Branch übertragen wurde.
 \end{enumerate}
 
 \subsection{Release\hyp Branching}
 
 \begin{enumerate}
     \item Erstellen Sie einen neuen Release\hyp Branch.
+ 
+    \item Wechseln Sie auf den neuen Release\hyp Branch und fügen Sie zusätzlich zu \enquote{Hallo Welt} die Textausgabe \enquote{Release 1} hinzu.
+    
+    \item Wechseln Sie auf den Haupt\hyp Branch und testen Sie das Programm. Die Textausgabe \enquote{Release 1} sollte nicht mehr erscheinen.
+    
+    \item Wechseln Sie erneut auf den Release\hyp Branch und ändern Sie \enquote{Hallo Welt} zu \enquote{Hallo Welt!}.
 
-    \item Fügen Sie zusätzlich zu \enquote{Hallo Welt} die Textausgabe \enquote{Release 1} hinzu.
+    \item Fügen Sie die Änderung durch einen Merge oder durch Cherry\hyp Pick der gewünschten Commits dem Haupt\hyp Branch hinzu.
     
-    \item Testen Sie ob das Programm auf dem Haupt\hyp Branch noch funktionsfähig ist.
-    
-    \item Erstellen Sie einen neuen Hotfix\hyp Branch.
-    
-    \item Ändern Sie \enquote{Hallo Welt} zu \enquote{Hallo Welt!}.
-
-    \item Fügen Sie die Änderung durch einen Merge dem Haupt- und dem Release\hyp Branch hinzu.
-    
-    \item Testen Sie auf dem Haupt- und dem Release\hyp Branch ob Ihre Änderung wirksam ist.
+    \item Testen Sie auf dem Haupt\hyp Branch ob Ihre Änderungen wirksam sind.
 \end{enumerate}
 
 \subsection{Task\hyp Branching}
@@ -55,3 +53,17 @@
     
     \item Prüfen Sie ob der Git\hyp Host\hyp Service Ihrer Wahl eine Verknüpfung zwischen dem Ticket / Issue und dem Branch hergestellt hat.
 \end{enumerate}
+
+\subsection{Kontrollfragen}
+
+Wechseln Sie in den Haupt\hyp Branch und lassen Sie sich den Git Log als Graph anzeigen. Nutzen Sie dafür den Befehl \texttt {git log \textendash\textendash graph}.
+
+\begin{itemize}
+    \item Wurde der Feature\hyp Branch korrekt vom Haupt\hyp Branch abgespalten und nach den Änderungen wieder mit diesem vereint?
+    
+    \item Wurden die gewünschten Änderungen auf dem Release\hyp Branch richtig in den Haupt\hyp Branch übernommen?
+    
+    \item Besteht der Release\hyp Branch nach Abschluss der Aufgabe weiterhin oder wurde dieser durch einen Merge in den Haupt\hyp Branch gelöscht? Überprüfen Sie anhand von \autoref{sec:workflows:branching}.
+    
+    \item Wurde der Task\hyp Branch korrekt vom Haupt\hyp Branch abgespalten und nach den Änderungen wieder mit diesem vereint?
+\end{itemize}
