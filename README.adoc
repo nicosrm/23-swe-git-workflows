@@ -1,7 +1,6 @@
-= Best Practises für Git-Vorgehensmodell in größeren Teams
+= Best Practises für Git-Vorgehensmodelle in größeren Teams
 
 == Abstrakt
-
 
 Die vorliegende Arbeit widmet sich verschiedenen Git-Vorgehensmodellen, die für Softwareentwicklungsprojekte in größeren Teams in Betracht kommen. Ziel ist es, ein grundlegendes Verständnis für die Anwendung dieser Strategien zu vermitteln.
 
