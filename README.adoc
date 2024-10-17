@@ -19,7 +19,7 @@ Die Arbeit kommt zur Erkenntnis, dass Gitflow und Trunk-based Development als Ba
 | Nico Schramm, Johann Straube, Mirella Willems
 
 | Beleg
-| https://gitlab.dit.htwk-leipzig.de/23-swe-thema-1/abgabe/-/jobs/artifacts/main/raw/01-Git_Vorgehensmodelle.pdf?job=build[PDF-Version], link:01_git-vorgehensmodelle.tex[LaTeX-Datei]
+| https://gitlab.dit.htwk-leipzig.de/23-swe-thema-1/abgabe/-/jobs/artifacts/main/raw/01-Git_Vorgehensmodelle.pdf?job=build[PDF-Version], link:src/01_git-vorgehensmodelle.tex[LaTeX-Datei]
 
 | Präsentation
 | link:presentation.pdf[PDF-Version]
