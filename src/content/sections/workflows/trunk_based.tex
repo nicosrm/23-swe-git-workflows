@@ -1,4 +1,4 @@
-% !TeX root = ../../../../01_git-vorgehensmodelle.tex
+% !TeX root = ../../../01_git-vorgehensmodelle.tex
 
 \subsection{Trunk-based Development}
 \label{sec:workflows:trunk} 
@@ -10,7 +10,7 @@ Es ist möglich, die Änderungen unmittelbar in den Haupt\hyp Branch, auch \emph
 Um zu erreichen, dass sich der Haupt\hyp Branch in einem produktionsreifen Zustand befindet, sollen die Entwickler:innen ihre jeweiligen Änderungen häufig integrieren~\cite{trunkbased2}. Daher sollen sämtliche Änderungen mindestens einmal am Tag wieder in den Trunk integriert werden, unabhängig davon, ob Feature\hyp Änderungen oder Erweiterungen bereits abgeschlossen sind oder nicht~\cite{trunkbased3}. Die Nutzung von Branches ist dann möglich, wenn es sich dabei um kurzlebige Branches handelt, die nach kurzer Zeit wieder im Trunk zusammengeführt werden~\cite{trunkbased7}, wie in \autoref{fig:trunk:TBD} dargestellt. Dort wird veranschaulicht, dass Entwickler:innen sowohl direkt auf dem Trunk arbeiten, als auch auf kurzlebigen Branches, welche mit dem Trunk zusammengeführt werden.
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{src/assets/diagrams/trunk/trunk.pdf}
+    \includegraphics[width=0.45\textwidth]{assets/diagrams/trunk/trunk.pdf}
     \caption{Trunk-based Development: Trunk und zwei kurzlebige Branches (\texttt{short1} und \texttt{short2})}
     \label{fig:trunk:TBD}
     \Description{Git-Graph für Trunk-based Development mit einem Trunk und zwei kurzlebigen Branches}
@@ -33,7 +33,7 @@ Sogenannte \emph{Feature Flags} ermöglichen Entwickler:innen, bestimmte Abschni
 In \autoref{code:trunk:featureflag} wird eine  einfache Feature\hyp Flag\hyp Implementierung in JavaScript gezeigt. Dabei hängt das Verhalten der Funktion \texttt{feature} von der Variable \texttt{featureFlagAn} ab. Wenn man \texttt{featureFlagAn} auf \texttt{true} setzt, wird \enquote{Das Feature ist an} ausgegeben, andernfalls wird ein Standardverhalten ausgeführt.
 
 \begin{listing}
-    \inputminted[breaklines]{js}{src/assets/code/trunk/featureflags.js}
+    \inputminted[breaklines]{js}{assets/code/trunk/featureflags.js}
     \caption{Erstellung von Feature\hyp Flags}
     \label{code:trunk:featureflag}
 \end{listing}  

@@ -1,6 +1,9 @@
 image: registry.gitlab.com/islandoftex/images/texlive:latest
 
 variables:
+  # directory containing tex main file
+  TEX_DIR: src
+
   # tex file without .tex extensions
   MAIN_TEX_FILE: 01_git-vorgehensmodelle
 
@@ -10,6 +13,7 @@ variables:
 
 build:
   script:
+    - cd $TEX_DIR
     # find all cite commands, list in .aux, bib-style
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
     # create .bbl
@@ -20,9 +24,9 @@ build:
     - pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $MAIN_TEX_FILE.tex
   
   after_script:
-    - cat $MAIN_TEX_FILE.log
-    - ls -lah
-    - mv $MAIN_TEX_FILE.pdf $OUTPUT_FILE_NAME.pdf
+    - cat $TEX_DIR/$MAIN_TEX_FILE.log
+    - ls -lah $TEX_DIR
+    - cp $TEX_DIR/$MAIN_TEX_FILE.pdf $OUTPUT_FILE_NAME.pdf
   
   artifacts:
     paths:

@@ -1,4 +1,4 @@
-% !TeX root = ../../../../01_git-vorgehensmodelle.tex
+% !TeX root = ../../../01_git-vorgehensmodelle.tex
 
 \subsection{Branching-Strategien}
 \label{sec:workflows:branching}
@@ -15,7 +15,7 @@ In den folgenden Abschnitten werden drei häufig verwendete Branching\hyp Strate
 Bei der Verwendung der \emph{Feature\hyp Branching}\hyp Strategie, werden neue Features nicht mehr auf dem Haupt\hyp Branch entwickelt. Stattdessen wird für jedes neue Feature ein dedizierter Branch erstellt~\cite{atlassian_feature_2023}. Ein Beispiel für diese Vorgehensweise ist in \autoref{fig:task_branch:feature} dargestellt.
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{src/assets/diagrams/task_branch/feature-branch.pdf}
+    \includegraphics[width=0.45\textwidth]{assets/diagrams/task_branch/feature-branch.pdf}
     \caption{Zwei Feature\hyp Branches}
     \label{fig:task_branch:feature}
     \Description{In der Abbildung ist ein Git\hyp Graph dargestellt, welcher die Branches main, feature1 und feature2 beinhaltet. Letztere werden jeweils von main abgezweigt und schließlich dorthin zurück integriert.}
@@ -37,7 +37,7 @@ Da die Unterschiede zwischen Feature\hyp Branches und dem Haupt\hyp Branch immer
 Bei der \emph{Release\hyp Branching}\hyp Strategie wird vor jedem Release ein neuer Branch aus dem Haupt\hyp Branch erstellt. Auf diesem Branch können letzte Bugs behoben und Anpassungen vorgenommen werden ohne damit die Entwicklung der anderen Features zu stören ~\cite{tucker_basics_2023}. Der Release\hyp Branch bleibt dabei als langlebiger Branch dauerhaft erhalten. Dadurch können parallel laufende Versionen unterstützt werden~\cite{hart_besten_2020}. Ein Beispiel für diese Vorgehensweise ist in \autoref{fig:task_branch:release} dargestellt.
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{src/assets/diagrams/task_branch/release-branch.pdf}
+    \includegraphics[width=0.45\textwidth]{assets/diagrams/task_branch/release-branch.pdf}
     \caption{Zwei Release\hyp Branches}
     \label{fig:task_branch:release}
     \Description{In der Abbildung ist ein Git\hyp Graph dargestellt, welcher die Branches main, release1 und release2 beinhaltet. Letztere werden jeweils von main abgezweigt und bleiben für den Rest der Entwicklung erhalten.}
@@ -56,7 +56,7 @@ Ein Nachteil der Release\hyp Branching\hyp Strategie besteht darin, dass die Arb
 Da die Koordinierung vieler Aufgaben in großen Projekten schnell unübersichtlich werden kann, wird häufig Tracking\hyp Software für Vorgänge verwendet. Dabei wird für jedem Vorgang ein Ticket (bspw. in Jira) oder ein Issue (bspw. in GitLab oder GitHub) erstellt. Bei der Verwendung der Task\hyp Branching\hyp Strategie wird für jeden dieser Vorgänge ein eigener Branch erstellt~\cite{atlassian_hintergrundwissen_2023}. Der Vorgangsschlüssel aus der Vorgangs\hyp Tracking\hyp Software muss dabei in den Branch\hyp Namen integriert werden. Dadurch kann jeder Branch schnell einem Ticktet zugeordnet werden~\cite{atlassian_hintergrundwissen_2023}. Ein Beispiel für diese Vorgehensweise ist in \autoref{fig:task_branch:task} dargestellt. 
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{src/assets/diagrams/task_branch/task-branch.pdf}
+    \includegraphics[width=0.45\textwidth]{assets/diagrams/task_branch/task-branch.pdf}
     \caption{Zwei Task\hyp Branches}
     \label{fig:task_branch:task}
     \Description{In der Abbildung ist ein Git\hyp Graph dargestellt, welcher die Branches main, task1 und task2 beinhaltet. Letztere werden jeweils von main abgezweigt und schließlich dorthin zurück integriert. T1 und T2 stehen dabei für den Schlüssel der zugehörigen Vorgänge}

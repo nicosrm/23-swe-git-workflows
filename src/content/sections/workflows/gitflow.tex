@@ -1,4 +1,4 @@
-% !TeX root = ../../../../01_git-vorgehensmodelle.tex
+% !TeX root = ../../../01_git-vorgehensmodelle.tex
 
 \subsection{Gitflow}
 \label{sec:workflows:gitflow}
@@ -23,7 +23,7 @@ Der \texttt{develop}-Branch stellt einen Integrationsbranch von Features dar, we
 Die jeweiligen Branches können entweder manuell (\texttt{git checkout -b \{develop, main\}}) oder mittels Git\hyp Erweiterung \texttt{git-flow}~\cite{driessenGitflow2012} erzeugt werden. Letzteres wird in \autoref{code:gitflow-init} dargestellt. Dabei werden alle relevanten Branches automatisch erstellt. Weitere Informationen zur Erweiterung können unter \cite{kummerGitflowcheatsheet2023} eingesehen werden.
 
 \begin{listing}
-\inputminted[breaklines]{text}{src/assets/code/gitflow/gitflow_init.sh}
+\inputminted[breaklines]{text}{assets/code/gitflow/gitflow_init.sh}
 \caption{Initialisierung von Gitflow mittels \texttt{git-flow}-Erweiterung}
 \label{code:gitflow-init}
 \end{listing}
@@ -42,7 +42,7 @@ Insgesamt verhält sich diese Branch\hyp Art identisch zum Feature\hyp Branching
 Ein Beispiel für zwei Feature\hyp Branches ist in \autoref{fig:gitflow:feature} dargestellt. Dabei sind bereits zwei Features auf \texttt{develop} integriert, welche durch die beiden Commits angedeutet werden. Anschließend werden zwei Feature\hyp Branches von \texttt{develop} abgezweigt, auf denen parallel gearbeitet wird. Diese werden schließlich zurück in \texttt{develop} integriert.
 
 \begin{figure}
-    \includegraphics[width=0.45\textwidth]{src/assets/diagrams/gitflow/feature.pdf}
+    \includegraphics[width=0.45\textwidth]{assets/diagrams/gitflow/feature.pdf}
     \caption{Zwei Feature-Branches in Gitflow}
     \label{fig:gitflow:feature}
     \Description{In der Abbildung ist ein Git-Graph dargestellt, welcher die Branches main, develop, feature/feat1 und feature/feat2 beinhaltet. Letztere werden jeweils von develop abgezweigt und schließlich dorthin zurück integriert.}
@@ -62,13 +62,13 @@ Nach der Fertigstellung wird der entsprechende Branch in \texttt{main} integrier
 Die hierbei ggf. auftretenden Konflikte sind zu lösen. Anschließend soll der Release-Branch dem Gitflow folgend gelöscht werden, da der Release durch den Merge auf \texttt{main} abgeschlossen ist. Daher wird der Branch nicht mehr benötigt~\cite{driessenSuccessfulGitBranching2010}. Der manuelle Ablauf bzw. mit der Extension sind in \autoref{code:gitflow-release} dargestellt.
 
 \begin{listing}
-    \inputminted[breaklines]{shell}{src/assets/code/gitflow/gitflow_release.sh}
+    \inputminted[breaklines]{shell}{assets/code/gitflow/gitflow_release.sh}
     \caption{Ablauf eines Release\hyp Branches in Gitflow}
     \label{code:gitflow-release}
 \end{listing}
 
 \begin{figure*}
-    \includegraphics[width=0.7\linewidth]{src/assets/diagrams/gitflow/flow.pdf}
+    \includegraphics[width=0.7\linewidth]{assets/diagrams/gitflow/flow.pdf}
     \caption{Beispiel für Release- und Hotfix\hyp Branches in Gitflow}
     \label{fig:gitflow:flow}
     \Description{}
